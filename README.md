@@ -1,6 +1,8 @@
 ## このリポジトリの役割
 
-dockerを使用して、PostgreSQL、MySQLの環境構築を行う
+MySqlの勉強用環境
+A5:SQL MK-2を使って、MySqlの勉強ができます。
+
 <br><br>
 ## 事前にダウンロードが必要なソフトウェア
 - [Docker](https://chigusa-web.com/blog/windows%E3%81%ABdocker%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%A6python%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89/)
@@ -25,7 +27,10 @@ docker volume create test_mysql_valume
 ```bash
 docker container run -p 3306:3306 --name test-mysql -v test_mysql_valume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=hogehoge -d mysql:latest
 ```
-bashで起動
+## A5:SQL MK-2への接続方法
+
+
+### ターミナル（bash）起動したい場合のコマンド
 ```bash
 docker exec -it test-mysql bash
 ```
